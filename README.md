@@ -24,16 +24,22 @@ The overall process of this work is illustrated in Figure 1.
 </p>
 
  <p align="center">
-  <img src="demo/stage_1_rgb.gif" alt="Original video snippets" width="300"/>
+  <img src="demo/stage_1_rgb.gif" alt="Original video snippets" width="200"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="demo/stage_2_rgb.gif" alt="Stage #2" width="200"/>
+  <img src="demo/stage_2_rgb.gif" alt="Stage #2" width="150"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="demo/stage_4_tra.gif" alt="Stage #4" width="200"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="demo/stage_5_tra.gif" alt="Stage #5" width="200"/>
 </p>
  <p align="center">
-  <em>Figure 2. Feature preprocessing visualization.</em>
+  <em>Figure 2(a). Feature preprocessing visualization.</em>
+</p>
+
+ <p align="center">
+  <img src="demo/stage_4_tra.gif" alt="Stage #4" width="150"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="demo/stage_5_tra.gif" alt="Stage #5" width="150"/>
+</p>
+ <p align="center">
+  <em>Figure 2(b). Feature preprocessing visualization.</em>
 </p>
 
 # Pretrained Detector
