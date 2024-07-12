@@ -6,7 +6,12 @@ This is the code for
 
 The overall process of this work is illustrated in Figure 1.
 
-
+<p align="center">
+  <img src="demo/overall_framework.jpg" alt="Figure 1. Our framework" width="1000"/>
+</p>
+ <p align="center">
+  <em>Figure 1. Our framework.</em>
+</p>
 
 # Pretrained detector
 
