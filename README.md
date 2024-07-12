@@ -35,6 +35,7 @@ The overall process of this work is illustrated in Figure 1.
  <p align="center">
   <em>Figure 2. Feature preprocessing visualization.</em>
 </p>
+
 # Pretrained Detector
 
 To accurately detect objects of interest in traffic scenes, we use YOLOv8-m for pre-training on additional annotated datasets.
