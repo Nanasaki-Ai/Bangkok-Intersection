@@ -51,6 +51,12 @@ To accurately detect objects of interest in traffic scenes, we use YOLOv8-m for 
 
 We recommend using the provided datasets for object detector training or utilizing the trained model parameters.
 
+This additional [auxiliary dataset](https://app.roboflow.com/nnu-hi7if/nnu_intersection/7) is used to train the object detector.
+
+Please install the environment according to the official website of [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics/blob/main/README.md).
+
+
+
 # Prepeocessing Method
 
 
