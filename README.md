@@ -27,8 +27,9 @@ The overall process of this work is illustrated in Figure 1.
   <img src="demo/stage_1_rgb.gif" alt="Original video snippets" width="200"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="demo/stage_2_rgb.gif" alt="Stage #2" width="100"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="demo/stage_3_tra.gif" alt="Stage #3" width="200"/>
+</p>
+ <p align="center">
+
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="demo/stage_4_tra.gif" alt="Stage #4" width="100"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
