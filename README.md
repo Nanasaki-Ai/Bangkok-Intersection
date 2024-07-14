@@ -37,8 +37,12 @@ The overall process of this work is illustrated in Figure 1.
 </p>
  <p align="center">
   <em>Figure 2. Feature preprocessing visualization. For details on the specific stages of preprocessing, please refer to Table 1.</em>
-  <em>The first row consists of video snippets, corresponding to the preprocessing features of the first and second stages from left to right.</em>
-  <em>The second row consists of trajectory snippets, corresponding to the preprocessing features of the third, fourth, and fifth stages from left to right.</em>
+</p>  
+ <p align="center">
+  <em>The first row are video snippets. Left: Stage #1. Right: Stage #2.</em>
+</p>  
+ <p align="center">
+  <em>The second row are trajectory snippets. Left: Stage #3. Middle: Stage #4. Right: Stage #5.</em>
 </p>
 
 # Pretrained Detector
