@@ -16,9 +16,11 @@ The dataset will be released in a subsequent update, while the preprocessed mid-
 
 The overall process of this work is illustrated in <strong><a href="#figure1">Figure 1</a></strong>.
 
-<strong><a href="#figure2">Figure 2</a></strong> visualizes the features of different preprocessing stages.
+<strong><a href="#figure2">Figure 2</a></strong> visualizes the features (snippets) of different preprocessing stages.
 
 <strong><a href="#table1">Table 1</a></strong> shows the different stages and their corresponding download links.
+
+It is recommended to download **trajectory-related** snippets for quick reproduction.
 
 <hr style="width:50%;text-align:center;margin-left:auto;margin-right:auto;">
 
@@ -75,28 +77,28 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
       <td>#1</td>
       <td>Video</td>
       <td>None</td>
-      <td><a href="https://pan.baidu.com/s/1JVXRf5kXREh3a1REQBJwUQ?pwd=m4r4">Baidu Cloud</a></td>
+      <td><a href="https://pan.baidu.com/s/1fPxTRJlmCoPldaAI4bjjxA?pwd=btxe">Baidu Cloud</a></td>
       <td>rgb_features</td>
     </tr>
     <tr>
       <td>#2</td>
       <td>Video</td>
       <td>RBTF</td>
-      <td><a href="https://pan.baidu.com/s/19fNUNXKMrWR-E5vOMNY2Og?pwd=kueg">Baidu Cloud</a></td>
+      <td><a href="https://pan.baidu.com/s/1JVXRf5kXREh3a1REQBJwUQ?pwd=m4r4">Baidu Cloud</a></td>
       <td>rgb_volumes_region</td>
     </tr>
     <tr>
       <td>#3</td>
       <td>Trajectory</td>
       <td>BR</td>
-      <td><a href="https://pan.baidu.com/s/1_pXS_LDc4hPn03LPwgrEkw?pwd=06lp">Baidu Cloud</a></td>
+      <td><a href="https://pan.baidu.com/s/19fNUNXKMrWR-E5vOMNY2Og?pwd=kueg">Baidu Cloud</a></td>
       <td>tra_features</td>
     </tr>
     <tr>
       <td>#4</td>
       <td>Trajectory</td>
       <td>RBTF+BR</td>
-      <td><a href="https://pan.baidu.com/s/13Dpw9sfgvsDdlwnGUtXGgw?pwd=1esm">Baidu Cloud</a></td>
+      <td><a href="https://pan.baidu.com/s/1_pXS_LDc4hPn03LPwgrEkw?pwd=06lp">Baidu Cloud</a></td>
       <td>tra_volumes_region</td>
     </tr>
     <tr>
@@ -109,6 +111,7 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
   </table>
 </div>
 
+<hr style="width:50%;text-align:center;margin-left:auto;margin-right:auto;">
 
 # Pretrained Detector
 
