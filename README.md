@@ -18,7 +18,7 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
 
 <strong><a href="#figure2">Figure 2</a></strong> visualizes the features of different preprocessing stages.
 
-**Table 1** shows the different stages and their corresponding download links.
+<strong><a href="#table1">Table 1</a></strong> shows the different stages and their corresponding download links.
 
 <hr style="width:50%;text-align:center;margin-left:auto;margin-right:auto;">
 
@@ -31,7 +31,7 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
 
 <hr style="width:50%;text-align:center;margin-left:auto;margin-right:auto;">
 
- <p align="center">
+ <p align="center" id="figure2">
   <img src="demo/stage_1_rgb.gif" alt="Stage #1" width="200"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="demo/stage_2_rgb.gif" alt="Stage #2" width="100"/>
@@ -43,8 +43,8 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="demo/stage_5_tra.gif" alt="Stage #5" width="100"/>
 </p>
- <p align="center" id="figure2">
-  <em><strong>Figure 2. Feature preprocessing visualization.</strong> For details on the specific stages of preprocessing, please refer to Table 1.</em>
+ <p align="center">
+  <em><strong>Figure 2. Feature preprocessing visualization.</strong> For details on the specific stages of preprocessing, please refer to <strong><a href="#table1">Table 1</a></strong>.</em>
 </p> 
  <p align="center">
   <em>The first row are video snippets. Left: Stage #1. Right: Stage #2.</em>
@@ -55,8 +55,8 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
 
 <hr style="width:50%;text-align:center;margin-left:auto;margin-right:auto;">
 
-  <p align="center">
-  <em><strong>Table 1. Preprocessing stage.</strong> For details on feature preprocessing visualization, please refer to Figure 2.</em>
+  <p align="center" id="table1">
+  <em><strong>Table 1. Preprocessing stage.</strong> For details on feature preprocessing visualization, please refer to <strong><a href="#figure2">Figure 2</a></strong>.</em>
 </p> 
   <p align="center">
   <em>Method indicates the preprocessing scheme used. RBTF represents the region-based trajectories filtering operation, BR indicates background removal strategy, IVE means irrelevant vehicle elimination approach.</em>
