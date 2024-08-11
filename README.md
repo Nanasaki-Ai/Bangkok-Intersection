@@ -10,7 +10,9 @@ This is the code for
 
 ## Bangkok Intersection Dataset
 
-The dataset will be released in a subsequent update, while the preprocessed mid-level features are currently available for download.
+2024.08.11 The [dataset](https://pan.baidu.com/s/1d2cyQVXj8Kc964-4tjYk4g?pwd=mn2s) and [annotations](https://pan.baidu.com/s/1aoJLJUT-A7H4jO1Luzsp9w?pwd=6l8r) are currently available for download.
+
+2024.07.23 The preprocessed mid-level features are currently available for [download](#download-feature-table).
 
 ## Our Method
 
@@ -65,7 +67,7 @@ It is recommended to download **trajectory-related** snippets for quick reproduc
 </p> 
 
 <div align="center">
-  <table>
+  <table id="download-feature-table">
     <tr>
       <th>Stage</th>
       <th>Modality</th>
