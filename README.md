@@ -12,7 +12,33 @@ This is the code for
 
 2024.08.11 The [dataset](https://pan.baidu.com/s/1d2cyQVXj8Kc964-4tjYk4g?pwd=mn2s) and [annotations](https://pan.baidu.com/s/1aoJLJUT-A7H4jO1Luzsp9w?pwd=6l8r) are currently available for download.
 
-2024.07.23 The preprocessed mid-level features are currently available for [download](#download-feature-table).
+2024.07.23 The [preprocessed mid-level features](#download-feature-table) are currently available for download.
+
+It is recommended to download the features of **stage #5** first for quick reproduction.
+
+### Dataset Introduction
+
+ This dataset originates from continuous 24-hour live-streams of a specific intersection in Bangkok, captured from a fixed overhead perspective on YouTube.
+ 
+ It consists of 10 hours of footage, divided into 120 untrimmed videos, recorded between November 2023 and March 2024.
+ 
+ Video numbers range from video_001 to video_120. All videos are five minutes long.
+ 
+ These videos feature the same traffic scene under various weather conditions and times of day.
+ 
+ Focusing on two pedestrian crosswalks, the dataset captures vehicles moving bidirectionally, entering and exiting the frame via the left and right boundaries.
+ 
+ To reduce extraneous background activity, the recordings were confined to areas of interest, yielding a final video resolution of 1200×1100 pixels at 30 fps.
+
+### Dataset Preparation
+
+We divide the video into frames, which is also an important pre-step for subsequent preprocessing.
+
+`pip install video-cli`
+
+Take video_001 as an example and divide it into frames:
+
+`video-toimg train_001.avi`
 
 ## Our Method
 
@@ -21,8 +47,6 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
 <strong><a href="#figure2">Figure 2</a></strong> visualizes the features (snippets) of different preprocessing stages.
 
 <strong><a href="#table1">Table 1</a></strong> shows the different stages and their corresponding download links.
-
-It is recommended to download **trajectory-related** snippets for quick reproduction.
 
 <hr style="width:50%;text-align:center;margin-left:auto;margin-right:auto;">
 
@@ -125,7 +149,15 @@ This additional [auxiliary dataset](https://app.roboflow.com/nnu-hi7if/nnu_inter
 
 Please install the environment according to the official website of [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics/blob/main/README.md).
 
+All models were trained on an RTX 4090. You can use our [pretrained weights](https://pan.baidu.com/s/1XhjA8IiR8zNuU3blHsymEQ?pwd=z8fl) or train the model yourself.
 
+Training a detector from scratch：
+
+`yolo task=detect mode=train model=yolov8m.pt data=intersection_images/data.yaml epochs=100 imgsz=640`
+
+YOLOv8 has five variants: -n, -s, -m, -l, -x. The "model" parameter can be modified to specify the variant to use.
+
+We recommend using -m as it achieves better results on auxiliary datasets.
 
 # Prepeocessing Method
 
