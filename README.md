@@ -219,14 +219,60 @@ We recommend using -m as it achieves better results on auxiliary datasets.
 The overall steps include:
 
 - **Object detection and tracking**
+  
+  Track vehicles and pedestrians and obtain trajectory data.
 
 - **Region-based trajectory filtering**
 
+  Filter vehicles and pedestrians of interest based on trajectories and predefined areas.
+
 - **Background removal**
+
+  According to the trajectory data, the foreground is retained and the background is eliminated.
 
 - **Irrelevant vehicle elimination**
 
+  Only keep pedestrians and key vehicles to construct more refined trajectory features.
+
+To demonstrate the output at each step, we have prepared separate Python files corresponding to nearly every stage of the process. You can *follow them sequentially* or *download our preprocessed files* for quick reproduction.
+
 ## Step 1: Object Detection and Tracking
+
+You can **skip this step** by downloading the [tracking data](https://pan.baidu.com/s/1niuto7cPNf1DqRzpr8h0LQ?pwd=teou) (430MB) we preprocessed earlier.
+
+Make sure you have **downloaded the dataset and pretrained weights**.
+
+In addition, the **[operating environment](#pretrained-detector)** of YOLOv8 also needs to be configured.
+
+It is recommended to **put these files in a folder as follows**, and you can also **modify the path**.
+
+        -intersection-video\  
+          -video_001.avi  
+          -video_002.avi
+          ...
+          -video_120.avi
+        -detector_weight\  
+          -m\          
+            -weights\
+              -best.pt
+        -tracking.py
+
+Next, the YOLOv8 interface is called to sequentially process the video, outputting the trajectories obtained through object tracking.
+
+`python tracking.py`
+
+When running normally you will get the following in the same file:
+
+        -intersection-video
+        -detector_weight
+        -tracking.py
+        -tracking_output\  
+          -video_001.txt  
+          -video_002.txt
+          ...
+          -video_120.txt
+
+These txt files contain the raw tracking data.
 
 ## Step 2: Region-based Trajectory Filtering
 
