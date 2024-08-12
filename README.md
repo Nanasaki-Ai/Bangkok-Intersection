@@ -8,11 +8,17 @@ This is the code for
 
 &nbsp;&nbsp;&nbsp;&nbsp;· We offer a new approach for understanding vehicle non-yielding behavior in surveillance videos. The filtering strategy transforms the task of detecting violations in complex scenes into recognizing violation actions within specific spatiotemporal regions of interest.
 
+**The current versions are all available for download from Baidu Netdisk.**
+
 ## Bangkok Intersection Dataset
 
-2024.08.11 The [dataset](https://pan.baidu.com/s/1d2cyQVXj8Kc964-4tjYk4g?pwd=mn2s) and [annotations](https://pan.baidu.com/s/1aoJLJUT-A7H4jO1Luzsp9w?pwd=6l8r) are currently available for download.
+2024.08.12 The **[labels](https://pan.baidu.com/s/17_Zi4dSVOLou5N1yRG0Ilw?pwd=4o9a)** for training and testing are publicly available.
 
-2024.07.23 The [preprocessed mid-level features](#download-feature-table) are currently available for download.
+2024.08.11 The **[dataset](https://pan.baidu.com/s/1d2cyQVXj8Kc964-4tjYk4g?pwd=mn2s)**(52GB) and **[annotations](https://pan.baidu.com/s/1aoJLJUT-A7H4jO1Luzsp9w?pwd=6l8r)** are currently available for download.
+
+&nbsp;&nbsp;&nbsp;&nbsp; See more details about the [dataset](#dataset-introduction) and annotations.
+
+2024.07.23 The **[preprocessed features](#download-feature-table)** are currently available for download.
 
 It is recommended to download the features of **stage #5** first for quick reproduction.
 
@@ -98,41 +104,47 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
       <th>Method</th>
       <th>Download</th>
       <th>File(rar)</th>
+      <th>Size</th>
     </tr>
     <tr>
       <td>#1</td>
       <td>Video</td>
       <td>None</td>
-      <td><a href="https://pan.baidu.com/s/1fPxTRJlmCoPldaAI4bjjxA?pwd=btxe">Baidu Cloud</a></td>
+      <td><a href="https://pan.baidu.com/s/1fPxTRJlmCoPldaAI4bjjxA?pwd=btxe">Baidu Netdisk</a></td>
       <td>rgb_features</td>
+      <td>31.4GB</td>
     </tr>
     <tr>
       <td>#2</td>
       <td>Video</td>
       <td>RBTF</td>
-      <td><a href="https://pan.baidu.com/s/1JVXRf5kXREh3a1REQBJwUQ?pwd=m4r4">Baidu Cloud</a></td>
+      <td><a href="https://pan.baidu.com/s/1JVXRf5kXREh3a1REQBJwUQ?pwd=m4r4">Baidu Netdisk</a></td>
       <td>rgb_volumes_region</td>
+      <td>11.9GB</td>
     </tr>
     <tr>
       <td>#3</td>
       <td>Trajectory</td>
       <td>BR</td>
-      <td><a href="https://pan.baidu.com/s/19fNUNXKMrWR-E5vOMNY2Og?pwd=kueg">Baidu Cloud</a></td>
+      <td><a href="https://pan.baidu.com/s/19fNUNXKMrWR-E5vOMNY2Og?pwd=kueg">Baidu Netdisk</a></td>
       <td>tra_features</td>
+      <td>974MB</td>
     </tr>
     <tr>
       <td>#4</td>
       <td>Trajectory</td>
       <td>RBTF+BR</td>
-      <td><a href="https://pan.baidu.com/s/1_pXS_LDc4hPn03LPwgrEkw?pwd=06lp">Baidu Cloud</a></td>
+      <td><a href="https://pan.baidu.com/s/1_pXS_LDc4hPn03LPwgrEkw?pwd=06lp">Baidu Netdisk</a></td>
       <td>tra_volumes_region</td>
+      <td>522MB</td>
     </tr>
     <tr>
       <td>#5</td>
       <td>Trajectory</td>
       <td>RBTF+BR+IVE</td>
-      <td><a href="https://pan.baidu.com/s/13Dpw9sfgvsDdlwnGUtXGgw?pwd=1esm">Baidu Cloud</a></td>
+      <td><a href="https://pan.baidu.com/s/13Dpw9sfgvsDdlwnGUtXGgw?pwd=1esm">Baidu Netdisk</a></td>
       <td>tra_att_volumes_region</td>
+      <td>410MB</td>
     </tr>
   </table>
 </div>
