@@ -276,8 +276,48 @@ These txt files contain the raw tracking data.
 
 ## Step 2: Region-based Trajectory Filtering
 
+This step processes the original trajectory data in **two stages**:
 
+*Stage 1:* Filter the original trajectory to identify the vehicle IDs of interest.
 
+To reproduce, run
+
+`python filtering_1.py`
+
+You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1NY9l_OWqlPoGjJXLiPhoCQ?pwd=lq1p) (62MB) we preprocessed earlier.
+
+*Stage 2:* Using the vehicle IDs identified in Stage 1, determine the time when each vehicle enters and exits the crosswalk.
+
+To reproduce, run
+
+`python filtering_2.py`
+
+You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1ANqBnCyIplW-DCj-e2f9gw?pwd=pit3) (65MB) we preprocessed earlier.
+
+It is recommended to **put these files in a folder as follows**, and you can also **modify the path**.
+
+        -tracking_output\  
+          -video_001.txt  
+          -video_002.txt
+          ...
+          -video_120.txt
+        -filtering_1.py
+        -filtering_2.py
+
+        -filtering_output\  # after running filtering_1.py
+          -video_001_bot.txt
+          -video_001_top.txt
+          ...
+          -video_120_bot.txt
+          -video_120_top.txt
+
+        -filtering_woatt_output\  # after running filtering_2.py
+          -video_001_woatt_bot.txt
+          -video_001_woatt_top.txt
+          ...
+          -video_120_woatt_bot.txt
+          -video_120_woatt_top.txt
+          
 ## Step 3: Background Removal
 
 ## Step 4: Irrelevant Vehicle Elimination
