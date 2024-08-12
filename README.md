@@ -4,37 +4,80 @@ This is the code for
 
 # Overview
 
-&nbsp;&nbsp;&nbsp;&nbsp;· We introduce a public dataset for detecting vehicles that fail to yield to pedestrians. This dataset, the first of its kind, captures real traffic scenes at two zebra crossings at a Bangkok intersection and includes 10 hours of video containing 1972 instances of violations.
+- We introduce a public dataset for detecting vehicles that fail to yield to pedestrians. This dataset, the first of its kind, captures real traffic scenes at two zebra crossings at a Bangkok intersection and includes 10 hours of video containing 1972 instances of violations.
 
-&nbsp;&nbsp;&nbsp;&nbsp;· We offer a new approach for understanding vehicle non-yielding behavior in surveillance videos. The filtering strategy transforms the task of detecting violations in complex scenes into recognizing violation actions within specific spatiotemporal regions of interest.
+- We offer a new approach for understanding vehicle non-yielding behavior in surveillance videos. The filtering strategy transforms the task of detecting violations in complex scenes into recognizing violation actions within specific spatiotemporal regions of interest.
 
 **The current versions are all available for download from Baidu Netdisk.**
 
 ## Bangkok Intersection Dataset
 
-2024.08.12 The **[labels](https://pan.baidu.com/s/17_Zi4dSVOLou5N1yRG0Ilw?pwd=4o9a)** for training and testing are publicly available.
+- *Aug 12, 2024*
 
-2024.08.11 The **[dataset](https://pan.baidu.com/s/1d2cyQVXj8Kc964-4tjYk4g?pwd=mn2s)**(52GB) and **[annotations](https://pan.baidu.com/s/1aoJLJUT-A7H4jO1Luzsp9w?pwd=6l8r)** are currently available for download.
+The **[labels](https://pan.baidu.com/s/17_Zi4dSVOLou5N1yRG0Ilw?pwd=4o9a)** for training and testing are publicly available.
 
-&nbsp;&nbsp;&nbsp;&nbsp; See more details about the [dataset](#dataset-introduction) and annotations.
+&nbsp;&nbsp;&nbsp;&nbsp; See more details about the [labels](#evaluation-criteria).
 
-2024.07.23 The **[preprocessed features](#download-feature-table)** are currently available for download.
+- *Aug 11, 2024*
 
-It is recommended to download the features of **stage #5** first for quick reproduction.
+The **[dataset](https://pan.baidu.com/s/1d2cyQVXj8Kc964-4tjYk4g?pwd=mn2s)** (52GB) and **[annotations](https://pan.baidu.com/s/1aoJLJUT-A7H4jO1Luzsp9w?pwd=6l8r)** are currently available for download.
+
+&nbsp;&nbsp;&nbsp;&nbsp; See more details about the [dataset](#dataset-introduction) and [annotations](#dataset-annotations).
+
+- *Jul 23, 2024*
+
+The **[preprocessed features](#download-feature-table)** are currently available for download.
+
+&nbsp;&nbsp;&nbsp;&nbsp; It is recommended to download the features of **stage #5** first for quick reproduction.
 
 ### Dataset Introduction
 
- This dataset originates from continuous 24-hour live-streams of a specific intersection in Bangkok, captured from a fixed overhead perspective on YouTube.
+ This dataset originates from continuous 24-hour live-streams of a specific intersection in Bangkok, captured from a fixed overhead perspective on **[YouTube](https://www.youtube.com/watch?v=qisHraYNXYI)**.
  
  It consists of 10 hours of footage, divided into 120 untrimmed videos, recorded between November 2023 and March 2024.
  
- Video numbers range from video_001 to video_120. All videos are five minutes long.
+ Video numbers range from *video_001* to *video_120*. All videos are five minutes long.
  
  These videos feature the same traffic scene under various weather conditions and times of day.
  
  Focusing on two pedestrian crosswalks, the dataset captures vehicles moving bidirectionally, entering and exiting the frame via the left and right boundaries.
  
  To reduce extraneous background activity, the recordings were confined to areas of interest, yielding a final video resolution of 1200×1100 pixels at 30 fps.
+
+### Dataset Annotations
+
+his work focuses on identifying instances where vehicles fail to yield to pedestrians. We provide detailed annotations for each vehicle that violates the rules, including its spatiotemporal information as it enters and exits the crosswalk area.
+
+The annotations are stored in JSON files, generated using LabelMe, where the file names correspond to the frame numbers at which the violations occur. For instance, if a vehicle enters the area of interest at frame 1301 and leaves at frame 1501, and fails to yield to pedestrians during this time, two JSON files will be created: 00001300.json and 00001500.json. 
+
+Each JSON file contains two key data, namely *points* and *group_id*.
+
+The bounding box coordinates are recorded under *points*, capturing the vehicle's location as it enters and exits the crosswalk. The bounding box coordinates of the vehicle in the form of *(top left x, top left y, bottom right x, bottom right y)*.
+
+*group_id* uniquely identifies the vehicle within the annotated area, distinguishing it from other vehicles. Note that if a vehicle violates the rules at two separate crosswalks, there will be four corresponding JSON files, each associated with two different group_ids.
+
+### Evaluation Criteria
+
+To evaluate the model's generalization and robustness, we designed two distinct cross-validation benchmarks: *cross-video* and *cross-scene*.
+
+- *Cross-video evaluation.* We sequentially numbered 120 video segments, with snippets from odd-numbered videos used for training and even-numbered for testing. This method evaluates the model's ability to generalize across diverse video sequences.
+
+- *Cross-scene evaluation.* Under this benchmark, events from the upper zebra crossing areas were assigned to the training dataset, while events from the lower areas were allocated to testing. This approach assesses the model's capability to recognize violations across varied traffic scenarios.
+
+We generated labels by performing spatiotemporal matching based on the annotations. 
+
+Snippets were extracted centered on areas where vehicles entered and exited while pedestrians passed by, resulting in 1972 snippets featuring vehicle infractions and 5752 featuring non-violating vehicles. Note that both types of snippets may contain multiple vehicles, some of which are not offending. This setup reflects real traffic complexities, challenging the model to distinguish and classify the main offending vehicle in each snippet accurately. We categorize the 1972 snippets as *positive samples* and the remaining 5752 as *negative samples*.
+
+The generated snippets consist of 32 downsampled images, named using the format **V**xxx**I**xxxxx**S**x**D**x**R**x**A**x (where x represents a number).
+
+Let's take **V001I00002S1D0R0A1** as an example to explain the naming convention:
+
+- **V** indicates the video number. For example, **V001** refers to video_001.
+- **I** denotes the tracking number of the target. **I00002** means that the vehicle's tracking ID is 2.
+- **S** stands for the scene number. **S0** represents the lower pedestrian crossing area, while **S1** indicates the upper zebra crossing area.
+- **D** specifies the vehicle's direction, indicating whether it is moving up or down, i.e., driving on the left or right side of the lane. In Thailand, vehicles typically drive on the left; **D0** represents down (right), and **D1** represents up (left).
+- **R** shows whether data augmentation was applied. In this case, all samples are **R0**, indicating no data enhancement.
+- **A** indicates whether the action is legal or illegal. **A0** denotes a violation, while **A1** indicates compliance.
 
 ### Dataset Preparation
 
@@ -173,6 +216,23 @@ We recommend using -m as it achieves better results on auxiliary datasets.
 
 # Prepeocessing Method
 
+The overall steps include:
+
+- **Object detection and tracking**
+
+- **Region-based trajectory filtering**
+
+- **Background removal**
+
+- **Irrelevant vehicle elimination**
+
+## Step 1: Object Detection and Tracking
+
+## Step 2: Region-based Trajectory Filtering
+
+## Step 3: Background Removal
+
+## Step 4: Irrelevant Vehicle Elimination
 
 # Acknowledgments
 
