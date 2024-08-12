@@ -261,7 +261,7 @@ Next, the YOLOv8 interface is called to sequentially process the video, outputti
 
 `python tracking.py`
 
-When running normally you will get the following in the same file:
+The program takes several hours to run completely. You will get the following in the same file:
 
         -intersection-video
         -detector_weight
@@ -275,6 +275,8 @@ When running normally you will get the following in the same file:
 These txt files contain the raw tracking data.
 
 ## Step 2: Region-based Trajectory Filtering
+
+
 
 ## Step 3: Background Removal
 
