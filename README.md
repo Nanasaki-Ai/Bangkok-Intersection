@@ -370,17 +370,29 @@ It is recommended to **put these files in a folder as follows**, and you can als
 
 We provide **two** background removal methods.
 
-- *The first method* retains all pedestrians and vehicles in the foreground. It can generate features for stages #3 and #4. 
+- *The first method (**optional**)* retains all pedestrians and vehicles in the foreground. It can generate features for stages #2 and #4. 
 
 To reproduce, run
 
 `python background_removal.py`
+
+You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1OH9VxMA-QNmtbhcKStf3kQ?pwd=agnk) (5GB) we preprocessed earlier.
+
+After completing the above operations, perform spatiotemporal cropping to obtain the feature files of stage 2 and stage 4. 
+
+(**optional**) To reproduce, run
+
+`python preprocessing_region.py`
+
+You can **skip this step** by downloading the [rgb features](https://pan.baidu.com/s/1JVXRf5kXREh3a1REQBJwUQ?pwd=m4r4) (11.9GB) or [trajectory features](https://pan.baidu.com/s/1_pXS_LDc4hPn03LPwgrEkw?pwd=06lp) (522MB) we preprocessed earlier.
 
 - *The second method* retains only pedestrians and subsequently adds key vehicles to remove irrelevant vehicles. It can generate features for stage #5.
 
 To reproduce, run
 
 `python background_removal_att.py`
+
+You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1KOMPo5z3BxNEmknNRjhccg?pwd=h0a1) (3GB) we preprocessed earlier.
 
 It is recommended to **put these files in a folder as follows**, and you can also **modify the path**.
 
@@ -389,10 +401,11 @@ It is recommended to **put these files in a folder as follows**, and you can als
           -video_002.txt
           ...
           -video_120.txt
-        -background_removal.py
+        -background_removal.py        #  optional
+        -preprocessing_rgb.py         #  optional
         -background_removal_att.py
 
-        -generated_images\  # after running background_removal.py
+        -generated_images\  # after running background_removal.py   (optional)
           -video_001\
             -00000000.jpg
             -00000001.jpg
