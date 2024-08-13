@@ -253,13 +253,11 @@ The overall steps include:
 
   Filter vehicles and pedestrians of interest based on trajectories and predefined areas.
 
-- **Background removal**
+- **Background removal and irrelevant vehicle elimination**
 
   According to the trajectory data, the foreground is retained and the background is eliminated.
 
-- **Irrelevant vehicle elimination**
-
-  Only keep pedestrians and key vehicles to construct more refined trajectory features.
+  The irrelevant vehicle elimination strategy only keep pedestrians and key vehicles to construct more refined trajectory features.
 
 To demonstrate the output at each step, we have prepared separate Python files corresponding to nearly every stage of the process. You can *follow them sequentially* or *download our preprocessed files* for quick reproduction.
 
@@ -366,7 +364,7 @@ It is recommended to **put these files in a folder as follows**, and you can als
           -video_120_woatt_bot.txt
           -video_120_woatt_top.txt
           
-## Step 3: Background Removal
+## Step 3: Background Removal and Irrelevant Vehicle Elimination
 
 We provide **two** background removal methods.
 
@@ -378,21 +376,13 @@ To reproduce, run
 
 You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1OH9VxMA-QNmtbhcKStf3kQ?pwd=agnk) (5GB) we preprocessed earlier.
 
-After completing the above operations, perform spatiotemporal cropping to obtain the feature files of stage 2 and stage 4. 
+After completing the above operations, perform spatiotemporal cropping to obtain the feature files of stages #2 and #4. 
 
 (**optional**) To reproduce, run
 
 `python preprocessing_region.py`
 
 You can **skip this step** by downloading the [rgb features](https://pan.baidu.com/s/1JVXRf5kXREh3a1REQBJwUQ?pwd=m4r4) (11.9GB) or [trajectory features](https://pan.baidu.com/s/1_pXS_LDc4hPn03LPwgrEkw?pwd=06lp) (522MB) we preprocessed earlier.
-
-- *The second method* retains only pedestrians and subsequently adds key vehicles to remove irrelevant vehicles. It can generate features for stage #5.
-
-To reproduce, run
-
-`python background_removal_att.py`
-
-You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1KOMPo5z3BxNEmknNRjhccg?pwd=h0a1) (3GB) we preprocessed earlier.
 
 It is recommended to **put these files in a folder as follows**, and you can also **modify the path**.
 
@@ -402,9 +392,8 @@ It is recommended to **put these files in a folder as follows**, and you can als
           ...
           -video_120.txt
         -background_removal.py        #  optional
-        -preprocessing_rgb.py         #  optional
-        -background_removal_att.py
-
+        -preprocessing_region.py         #  optional
+        
         -generated_images\  # after running background_removal.py   (optional)
           -video_001\
             -00000000.jpg
@@ -414,6 +403,32 @@ It is recommended to **put these files in a folder as follows**, and you can als
           -video_002
           ...
           -video_120
+        -rgb_volumes_region  # after running reprocessing_region.py   (optional)
+        -tra_volumes_region  # after running reprocessing_region.py   (optional)
+        
+- *The second method* retains only pedestrians and subsequently adds key vehicles to remove irrelevant vehicles. It can generate features for stage #5.
+
+To reproduce, run
+
+`python background_removal_att.py`
+
+You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1KOMPo5z3BxNEmknNRjhccg?pwd=h0a1) (3GB) we preprocessed earlier.
+
+After completing the above operations, perform spatiotemporal cropping to obtain the feature files of stage #5.
+        
+To reproduce, run
+
+`python preprocessing_region_att.py`
+
+It is recommended to **put these files in a folder as follows**, and you can also **modify the path**.
+
+        -tracking_output\  
+          -video_001.txt  
+          -video_002.txt
+          ...
+          -video_120.txt
+        -background_removal_att.py
+        -preprocessing_region_att.py
 
         -generated_ped_images\  # after running background_removal_att.py
           -video_001\
@@ -424,8 +439,7 @@ It is recommended to **put these files in a folder as follows**, and you can als
           -video_002
           ...
           -video_120
-        
-## Step 4: Irrelevant Vehicle Elimination
+        -tra_att_volumes_region  # after running preprocessing_region_att.py
 
 # Acknowledgments
 
