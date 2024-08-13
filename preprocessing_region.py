@@ -52,7 +52,7 @@ crop_rt = (480, 50, 1100, 470)
 
 # Read dictionaries and annotations
 for file_name in tqdm(video_num, desc='Processing files'):    
-    file_number = file_name.split('_')[-1]  # 分割字符串并取最后一个部分
+    file_number = file_name.split('_')[-1] 
     
     # Construct the path to read the file
     label_path = os.path.join(label_file, f"{file_name}.txt")
