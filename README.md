@@ -64,6 +64,18 @@ Convert spatiotemporal annotations in json format to txt text. Run:
 
 `python json_to_txt.py`
 
+It is recommended to **put these files in a folder as follows**, and you can also **modify the path**.
+
+        -annotations\
+          -video_001\
+            -00000291.json
+            -00000377.json
+            ...
+          -video_002
+          ...
+          -video_120
+        -json_to_txt.py
+
 For a certain violation of a certain vehicle, the format of the txt file is:
 
         -group_id
@@ -318,6 +330,7 @@ It is recommended to **put these files in a folder as follows**, and you can als
           -video_120.txt
         -filtering_1.py
         -filtering_2.py
+        -filtering_3.py
 
         -filtering_output\  # after running filtering_1.py
           -video_001_bot.txt
