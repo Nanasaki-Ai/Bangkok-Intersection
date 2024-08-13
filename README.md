@@ -303,7 +303,7 @@ These txt files contain the raw tracking data.
 
 ## Step 2: Region-based Trajectory Filtering
 
-This step processes the original trajectory data in **two stages**:
+This step processes the original trajectory data in **three stages**:
 
 *Stage 1:* Filter the original trajectory to identify the vehicle IDs of interest.
 
@@ -320,6 +320,19 @@ To reproduce, run
 `python filtering_2.py`
 
 You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1ANqBnCyIplW-DCj-e2f9gw?pwd=pit3) (65MB) we preprocessed earlier.
+
+*Stage 3:* Generates the detection value in txt format. Its format is similar to the real value:
+
+        -track_id
+        -How many times (all 2)
+        -1 / Number of frames entering the zebra crossing area / (all 0) / Bounding box when entering the zebra crossing
+        -2 / Number of frames leaving the zebra crossing area / (all 0) / Bounding box when leaving the zebra crossing
+
+To reproduce, run
+
+`python filtering_3.py`
+
+You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1pSkRGPJDVL0-rX19NRC33A?pwd=n0lk) (610KB) we preprocessed earlier.
 
 It is recommended to **put these files in a folder as follows**, and you can also **modify the path**.
 
@@ -340,6 +353,13 @@ It is recommended to **put these files in a folder as follows**, and you can als
           -video_120_top.txt
 
         -filtering_woatt_output\  # after running filtering_2.py
+          -video_001_woatt_bot.txt
+          -video_001_woatt_top.txt
+          ...
+          -video_120_woatt_bot.txt
+          -video_120_woatt_top.txt
+          
+         -filtering_woatt_summary\  # after running filtering_3.py
           -video_001_woatt_bot.txt
           -video_001_woatt_top.txt
           ...
