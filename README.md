@@ -20,9 +20,13 @@ The **[labels](https://pan.baidu.com/s/17_Zi4dSVOLou5N1yRG0Ilw?pwd=4o9a)** for t
 
 - *Aug 11, 2024*
 
-The **[dataset](https://pan.baidu.com/s/1d2cyQVXj8Kc964-4tjYk4g?pwd=mn2s)** (52GB) and **[annotations](https://pan.baidu.com/s/1aoJLJUT-A7H4jO1Luzsp9w?pwd=6l8r)** are currently available for download.
+The **dataset** (52GB) and **[annotations](https://pan.baidu.com/s/1aoJLJUT-A7H4jO1Luzsp9w?pwd=6l8r)** are currently available for download.
 
 &nbsp;&nbsp;&nbsp;&nbsp; See more details about the [dataset](#dataset-introduction) and [annotations](#dataset-annotations).
+
+Please **fill in the dataset request form**. We will send you a link to download the dataset after the manuscript is accepted.
+
+In addition, you can **directly download our preprocessed data for reproduction**.
 
 - *Jul 23, 2024*
 
