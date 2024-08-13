@@ -60,6 +60,17 @@ The bounding box coordinates are recorded under *points*, capturing the vehicle'
 
 *group_id* uniquely identifies the vehicle within the annotated area, distinguishing it from other vehicles. Note that if a vehicle violates the rules at two separate crosswalks, there will be four corresponding JSON files, each associated with two different group_ids.
 
+Convert spatiotemporal annotations in json format to txt text. Run:
+
+`python json_to_txt.py`
+
+For a certain violation of a certain vehicle, the format of the txt file is:
+
+        -group_id
+        -How many times (all 2)
+        -1 / Number of frames entering the zebra crossing area / (all 0) / Bounding box when entering the zebra crossing
+        -2 / Number of frames leaving the zebra crossing area / (all 0) / Bounding box when leaving the zebra crossing
+
 ### Evaluation Criteria
 
 To evaluate the model's generalization and robustness, we designed two distinct cross-validation benchmarks: *cross-video* and *cross-scene*.
