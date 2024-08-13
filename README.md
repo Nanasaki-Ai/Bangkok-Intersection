@@ -305,7 +305,7 @@ These txt files contain the raw tracking data.
 
 This step processes the original trajectory data in **three stages**:
 
-*Stage 1:* Filter the original trajectory to identify the vehicle IDs of interest.
+- *Stage 1:* Filter the original trajectory to identify the vehicle IDs of interest.
 
 To reproduce, run
 
@@ -313,7 +313,7 @@ To reproduce, run
 
 You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1NY9l_OWqlPoGjJXLiPhoCQ?pwd=lq1p) (62MB) we preprocessed earlier.
 
-*Stage 2:* Using the vehicle IDs identified in Stage 1, determine the time when each vehicle enters and exits the crosswalk.
+- *Stage 2:* Using the vehicle IDs identified in Stage 1, determine the time when each vehicle enters and exits the crosswalk.
 
 To reproduce, run
 
@@ -321,7 +321,7 @@ To reproduce, run
 
 You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1ANqBnCyIplW-DCj-e2f9gw?pwd=pit3) (65MB) we preprocessed earlier.
 
-*Stage 3:* Generates the detection value in txt format. Its format is similar to the real value:
+- *Stage 3:* Generates the detection value in txt format. Its format is similar to the ground truth:
 
         -track_id
         -How many times (all 2)
@@ -368,6 +368,50 @@ It is recommended to **put these files in a folder as follows**, and you can als
           
 ## Step 3: Background Removal
 
+We provide **two** background removal methods.
+
+- *The first method* retains all pedestrians and vehicles in the foreground. It can generate features for stages #3 and #4. 
+
+To reproduce, run
+
+`python background_removal.py`
+
+- *The second method* retains only pedestrians and subsequently adds key vehicles to remove irrelevant vehicles. It can generate features for stage #5.
+
+To reproduce, run
+
+`python background_removal_att.py`
+
+It is recommended to **put these files in a folder as follows**, and you can also **modify the path**.
+
+        -tracking_output\  
+          -video_001.txt  
+          -video_002.txt
+          ...
+          -video_120.txt
+        -background_removal.py
+        -background_removal_att.py
+
+        -generated_images\  # after running background_removal.py
+          -video_001\
+            -00000000.jpg
+            -00000001.jpg
+            ...
+            -00008999.jpg
+          -video_002
+          ...
+          -video_120
+
+        -generated_ped_images\  # after running background_removal_att.py
+          -video_001\
+            -00000000.jpg
+            -00000001.jpg
+            ...
+            -00008999.jpg
+          -video_002
+          ...
+          -video_120
+        
 ## Step 4: Irrelevant Vehicle Elimination
 
 # Acknowledgments
