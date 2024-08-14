@@ -24,9 +24,11 @@ The **dataset** (52GB) and **[annotations](https://pan.baidu.com/s/1aoJLJUT-A7H4
 
 &nbsp;&nbsp;&nbsp;&nbsp; See more details about the [dataset](#dataset-introduction) and [annotations](#dataset-annotations).
 
-Please **fill in the dataset request form**. We will send you a link to download the dataset after the manuscript is accepted.
+We will *make the dataset fully available for download after the manuscript is accepted*. Now you can reproduce our method in two ways:
 
-In addition, you can **directly download our preprocessed data for reproduction**.
+-- Download a [video](https://pan.baidu.com/s/1KAySJ_DNrKo6M6l0_Si7nw?pwd=cpgd) (514MB) from the dataset and continue.
+
+-- You can **directly download our preprocessed data for reproduction**.
 
 - *Jul 23, 2024*
 
