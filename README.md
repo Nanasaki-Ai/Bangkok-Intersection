@@ -465,7 +465,7 @@ To reproduce, run
 
 You can also modify the parameters to call other models for training and testing.
 
-You can use the S3D model we have trained for testing.
+You can use the [S3D](https://pan.baidu.com/s/1kbTvNPA72R6Dj3z_VtK1cg?pwd=nyfo) model (60.8M) we have trained for testing.
 
 # Acknowledgments
 
