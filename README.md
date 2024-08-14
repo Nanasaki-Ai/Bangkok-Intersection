@@ -365,7 +365,7 @@ It is recommended to **put these files in a folder as follows**, and you can als
           ...
           -video_120_woatt_bot.txt
           -video_120_woatt_top.txt
-          
+
 ## Step 3: Background Removal and Irrelevant Vehicle Elimination
 
 We provide **two** background removal methods.
@@ -407,7 +407,7 @@ It is recommended to **put these files in a folder as follows**, and you can als
           -video_120
         -rgb_volumes_region  # after running reprocessing_region.py   (optional)
         -tra_volumes_region  # after running reprocessing_region.py   (optional)
-        
+
 - *The second method* retains only pedestrians and subsequently adds key vehicles to remove irrelevant vehicles. It can generate features for stage #5.
 
 To reproduce, run
@@ -442,6 +442,30 @@ It is recommended to **put these files in a folder as follows**, and you can als
           ...
           -video_120
         -tra_att_volumes_region  # after running preprocessing_region_att.py
+
+# Model training and testing
+
+After completing the preprocessing, the main program can be called for training and testing.
+
+It is recommended to **put these files in a folder as follows**, and you can also **modify the path**.
+
+        -main.py
+        -dataset_reader.py
+        -model_s3d_tra.py           # Call the model and give it arguments
+        -model
+
+        -tra_att_volumes_region     # Recommended
+        -rgb_volumes_region         # Optional
+        -tra_volumes_region         # Optional
+        ...
+
+To reproduce, run
+
+`python main.py`
+
+You can also modify the parameters to call other models for training and testing.
+
+You can use the S3D model we have trained for testing.
 
 # Acknowledgments
 
