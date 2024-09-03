@@ -12,6 +12,10 @@ This is the code for
 
 ## Bangkok Intersection Dataset
 
+- *Sep 3, 2024*
+
+Some important data is already available for download from **Google Drive**.
+
 - *Aug 12, 2024*
 
 The **[labels](https://pan.baidu.com/s/17_Zi4dSVOLou5N1yRG0Ilw?pwd=4o9a)** for training and testing are publicly available.
@@ -20,13 +24,13 @@ The **[labels](https://pan.baidu.com/s/17_Zi4dSVOLou5N1yRG0Ilw?pwd=4o9a)** for t
 
 - *Aug 11, 2024*
 
-The **dataset** (52GB) and **[annotations](https://pan.baidu.com/s/1aoJLJUT-A7H4jO1Luzsp9w?pwd=6l8r)** are currently available for download.
+The **dataset** (52GB) and **annotations** are currently available for download.
 
 &nbsp;&nbsp;&nbsp;&nbsp; See more details about the [dataset](#dataset-introduction) and [annotations](#dataset-annotations).
 
 We will *make the dataset fully available for download after the manuscript is accepted*. Now you can reproduce our method in two ways:
 
--- Download a [video](https://pan.baidu.com/s/1KAySJ_DNrKo6M6l0_Si7nw?pwd=cpgd) (514MB) from the dataset and continue.
+-- Download a video (514MB) from the dataset and continue. You can download the data through [Baidu Disk](https://pan.baidu.com/s/1KAySJ_DNrKo6M6l0_Si7nw?pwd=cpgd) or [Google Drive](https://drive.google.com/file/d/16By0jyQPQsdZpp_oTwgnEppsrpBTTYox/view?usp=drive_link).
 
 -- You can **directly download our preprocessed data for reproduction**.
 
@@ -52,7 +56,9 @@ The **[preprocessed features](#download-feature-table)** are currently available
 
 ### Dataset Annotations
 
-his work focuses on identifying instances where vehicles fail to yield to pedestrians. We provide detailed annotations for each vehicle that violates the rules, including its spatiotemporal information as it enters and exits the crosswalk area.
+You can download the data through [Baidu Disk](https://pan.baidu.com/s/1aoJLJUT-A7H4jO1Luzsp9w?pwd=6l8r) or [Google Drive](https://drive.google.com/file/d/1pKrevRdrWC7-hDcp8O-jYVJMv-YMPayW/view?usp=sharing).
+
+This work focuses on identifying instances where vehicles fail to yield to pedestrians. We provide detailed annotations for each vehicle that violates the rules, including its spatiotemporal information as it enters and exits the crosswalk area.
 
 The annotations are stored in JSON files, generated using LabelMe, where the file names correspond to the frame numbers at which the violations occur. For instance, if a vehicle enters the area of interest at frame 1301 and leaves at frame 1501, and fails to yield to pedestrians during this time, two JSON files will be created: 00001300.json and 00001500.json. 
 
@@ -182,7 +188,7 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
       <td>#1</td>
       <td>Video</td>
       <td>None</td>
-      <td><a href="https://pan.baidu.com/s/1fPxTRJlmCoPldaAI4bjjxA?pwd=btxe">Baidu Netdisk</a></td>
+      <td><a href="https://pan.baidu.com/s/1fPxTRJlmCoPldaAI4bjjxA?pwd=btxe">Baidu Disk</a></td>
       <td>rgb_features</td>
       <td>31.4GB</td>
     </tr>
@@ -190,7 +196,7 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
       <td>#2</td>
       <td>Video</td>
       <td>RBTF</td>
-      <td><a href="https://pan.baidu.com/s/1JVXRf5kXREh3a1REQBJwUQ?pwd=m4r4">Baidu Netdisk</a></td>
+      <td><a href="https://pan.baidu.com/s/1JVXRf5kXREh3a1REQBJwUQ?pwd=m4r4">Baidu Disk</a></td>
       <td>rgb_volumes_region</td>
       <td>11.9GB</td>
     </tr>
@@ -198,7 +204,7 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
       <td>#3</td>
       <td>Trajectory</td>
       <td>BR</td>
-      <td><a href="https://pan.baidu.com/s/19fNUNXKMrWR-E5vOMNY2Og?pwd=kueg">Baidu Netdisk</a></td>
+      <td><a href="https://pan.baidu.com/s/19fNUNXKMrWR-E5vOMNY2Og?pwd=kueg">Baidu Disk</a></td>
       <td>tra_features</td>
       <td>974MB</td>
     </tr>
@@ -206,7 +212,7 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
       <td>#4</td>
       <td>Trajectory</td>
       <td>RBTF+BR</td>
-      <td><a href="https://pan.baidu.com/s/1_pXS_LDc4hPn03LPwgrEkw?pwd=06lp">Baidu Netdisk</a></td>
+      <td><a href="https://pan.baidu.com/s/1_pXS_LDc4hPn03LPwgrEkw?pwd=06lp">Baidu Disk</a></td>
       <td>tra_volumes_region</td>
       <td>522MB</td>
     </tr>
@@ -214,7 +220,10 @@ The overall process of this work is illustrated in <strong><a href="#figure1">Fi
       <td>#5</td>
       <td>Trajectory</td>
       <td>RBTF+BR+IVE</td>
-      <td><a href="https://pan.baidu.com/s/13Dpw9sfgvsDdlwnGUtXGgw?pwd=1esm">Baidu Netdisk</a></td>
+      <td>
+       <a href="https://pan.baidu.com/s/13Dpw9sfgvsDdlwnGUtXGgw?pwd=1esm">Baidu Disk</a>
+       <a href="https://drive.google.com/file/d/1gZCSWD1AC2dtdrcC1bP3U5KqjTvPZ1sX/view?usp=sharing">Google Drive</a>
+      </td>
       <td>tra_att_volumes_region</td>
       <td>410MB</td>
     </tr>
@@ -233,7 +242,9 @@ This additional [auxiliary dataset](https://app.roboflow.com/nnu-hi7if/nnu_inter
 
 Please install the environment according to the official website of [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics/blob/main/README.md).
 
-All models were trained on an RTX 4090. You can use our [pretrained weights](https://pan.baidu.com/s/1XhjA8IiR8zNuU3blHsymEQ?pwd=z8fl) or train the model yourself.
+All models were trained on an RTX 4090. You can use our **pretrained weights** or train the model yourself.
+
+You can download the weights through [Baidu Disk](https://pan.baidu.com/s/1XhjA8IiR8zNuU3blHsymEQ?pwd=z8fl) or [Google Drive](https://drive.google.com/drive/folders/1fPra_scgzv_RP1yKMQ83HdyWiVFyeYkc?usp=sharing).
 
 Training a detector from scratch：
 
@@ -265,7 +276,9 @@ To demonstrate the output at each step, we have prepared separate Python files c
 
 ## Step 1: Object Detection and Tracking
 
-You can **skip this step** by downloading the [tracking data](https://pan.baidu.com/s/1niuto7cPNf1DqRzpr8h0LQ?pwd=teou) (430MB) we preprocessed earlier.
+You can **skip this step** by downloading the **tracking data** (430MB) we preprocessed earlier.
+
+You can download the tracking data through [Baidu Disk](https://pan.baidu.com/s/1niuto7cPNf1DqRzpr8h0LQ?pwd=teou) or [Google Drive](https://drive.google.com/file/d/1rwJ9bXvbW7czSOqD_2WHxHweK7PadzZF/view?usp=sharing).
 
 Make sure you have **downloaded the dataset and pretrained weights**.
 
@@ -311,7 +324,9 @@ To reproduce, run
 
 `python filtering_1.py`
 
-You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1NY9l_OWqlPoGjJXLiPhoCQ?pwd=lq1p) (62MB) we preprocessed earlier.
+You can **skip this step** by downloading the **data** (62MB) we preprocessed earlier.
+
+You can download the data through [Baidu Disk](https://pan.baidu.com/s/1NY9l_OWqlPoGjJXLiPhoCQ?pwd=lq1p) or [Google Drive](https://drive.google.com/file/d/1dbJPFLjdewRFxvqY_KOMwKh-FoD4wBnn/view?usp=sharing).
 
 - *Stage 2:* Using the vehicle IDs identified in Stage 1, determine the time when each vehicle enters and exits the crosswalk.
 
@@ -319,7 +334,9 @@ To reproduce, run
 
 `python filtering_2.py`
 
-You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1ANqBnCyIplW-DCj-e2f9gw?pwd=pit3) (65MB) we preprocessed earlier.
+You can **skip this step** by downloading the **data** (65MB) we preprocessed earlier.
+
+You can download the data through [Baidu Disk](https://pan.baidu.com/s/1ANqBnCyIplW-DCj-e2f9gw?pwd=pit3) or [Google Drive](https://drive.google.com/file/d/1rBsdkhpgCxxTE-xbToJRY7jkWnFSdUND/view?usp=sharing).
 
 - *Stage 3:* Generates the detection value in txt format. Its format is similar to the ground truth:
 
@@ -332,7 +349,9 @@ To reproduce, run
 
 `python filtering_3.py`
 
-You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1pSkRGPJDVL0-rX19NRC33A?pwd=n0lk) (610KB) we preprocessed earlier.
+You can **skip this step** by downloading the **data** (610KB) we preprocessed earlier.
+
+You can download the data through [Baidu Disk](https://pan.baidu.com/s/1pSkRGPJDVL0-rX19NRC33A?pwd=n0lk) or [Google Drive](https://drive.google.com/file/d/1JCwaziKEMoWawvzuc8Oy2M0VPM7wy9OX/view?usp=sharing).
 
 It is recommended to **put these files in a folder as follows**, and you can also **modify the path**.
 
@@ -414,13 +433,19 @@ To reproduce, run
 
 `python background_removal_att.py`
 
-You can **skip this step** by downloading the [data](https://pan.baidu.com/s/1KOMPo5z3BxNEmknNRjhccg?pwd=h0a1) (3GB) we preprocessed earlier.
+You can **skip this step** by downloading the **data** (3GB) we preprocessed earlier.
+
+You can download the data through [Baidu Disk](https://pan.baidu.com/s/1KOMPo5z3BxNEmknNRjhccg?pwd=h0a1) or [Google Drive](https://drive.google.com/file/d/1XtTEBXPn_PMUlBVZx58V1vZ59Or9xaFD/view?usp=sharing).
 
 After completing the above operations, perform spatiotemporal cropping to obtain the feature files of stage #5.
         
 To reproduce, run
 
 `python preprocessing_region_att.py`
+
+You can **skip this step** by downloading the **refined features** (410MB) we preprocessed earlier.
+
+You can download the data through [Baidu Disk](https://pan.baidu.com/s/13Dpw9sfgvsDdlwnGUtXGgw?pwd=1esm) or [Google Drive](https://drive.google.com/file/d/1gZCSWD1AC2dtdrcC1bP3U5KqjTvPZ1sX/view?usp=sharing).
 
 It is recommended to **put these files in a folder as follows**, and you can also **modify the path**.
 
@@ -453,6 +478,7 @@ It is recommended to **put these files in a folder as follows**, and you can als
         -dataset_reader.py
         -model_s3d_tra.py           # Call the model and give it arguments
         -model
+        -label
 
         -tra_att_volumes_region     # Recommended
         -rgb_volumes_region         # Optional
