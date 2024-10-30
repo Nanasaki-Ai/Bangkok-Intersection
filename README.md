@@ -1,4 +1,4 @@
-# Bangkok Intersection Dataset for Illegal Action Detection
+# The Crosswalk Dataset for Illegal Action Detection
 This is the code for
 **'How to Detect Non-yielding Actions of Vehicles?  A Challenging Dataset with Strong Baseline'.**
 
@@ -10,7 +10,7 @@ This is the code for
 
 **The current versions are all available for download from Baidu Netdisk.**
 
-## Bangkok Intersection Dataset
+## The Crosswalk Dataset
 
 - *Sep 3, 2024*
 
@@ -109,7 +109,7 @@ Let's take **V001I00002S1D0R0A1** as an example to explain the naming convention
 
 - **V** indicates the video number. For example, **V001** refers to video_001.
 - **I** denotes the tracking number of the target. **I00002** means that the vehicle's tracking ID is 2.
-- **S** stands for the scene number. **S0** represents the lower pedestrian crossing area, while **S1** indicates the upper zebra crossing area.
+- **S** stands for the scene number. **S1** represents the lower pedestrian crossing area, while **S0** indicates the upper zebra crossing area.
 - **D** specifies the vehicle's direction, indicating whether it is moving up or down, i.e., driving on the left or right side of the lane. In Thailand, vehicles typically drive on the left; **D0** represents down (right), and **D1** represents up (left).
 - **R** shows whether data augmentation was applied. In this case, all samples are **R0**, indicating no data enhancement.
 - **A** indicates whether the action is legal or illegal. **A0** denotes a violation, while **A1** indicates compliance.
